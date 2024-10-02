@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reembolso Sabre</title>
+
+    <style>
+        body{
+            background-color: #0e80dd;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+            
+        }
+        #logo{
+            text-align: center;
+            box-shadow: 2px 2px 2px black;
+        }
+        h1{
+            text-align: center;
+            color: #F6B024;
+            text-shadow: 2px 2px 2px black;
+            text-decoration: underline;
+        }
+        main{
+            background-color: #1992f5;
+            margin: auto;
+            width: 600px;
+            border-radius: 5%;
+            box-shadow: 2px 2px 2px black;
+            padding: 3%;
+            
+            
+        }
+        #conteudo01{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        #conteudo02{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        #conteudo03{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        #conteudo04{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        #conteudo05{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        #conteudo06{
+            display: none;
+            background-color: #0d8cf4;
+            box-shadow: 2px 2px 2px black;
+            width: 500px;
+        }
+        button{
+            background-color: #F6B024;
+        }
+        #botao01{
+            position: relative;
+            left: -9%;
+            top: -2%;
+        }
+        #botao02{
+            position: relative;
+            left: -9%;
+        }
+        #botao03{
+            position: relative;
+            left: -9%;
+        }
+        #botao04{
+            position: relative;
+            left: -9%;
+        }
+        #botao05{
+            position: relative;
+            left: -9%;
+        }
+        #botao06{
+            position: relative;
+            left: -9%;
+        } 
+        div{
+            background-color: rgb(5, 85, 146);
+            width: 350px;
+            padding: 1%;
+            border-radius: 5%;
+            box-shadow: 2px 2px 2px black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+
+        }
+        h2{
+            text-align: center;
+            color: #F6B024;
+            text-shadow: 2px 2px 2px black;
+
+        }
+    
+    
+
+    </style>
+<script src="script.js" defer></script>
+
+
+</head>
+<body>
+    <section id="logo"><img src="img confiança/grupo branco.png" alt=""></section>
+
+    <h1>Reembolso SABRE 24hrs</h1>
+    <div>
+        
+    <h3>1. Alterar PCC da Base</h3>
+    <p>Mandatório <strong>AAA</strong>
+    <dd>Ex: AAALT4H (Alterar PCC para POA)</dd></p>
+    <h3>2. Assinar impressora</h3>
+    <p>Mandatório <strong>PTR/35A5A1</strong>
+    <dd>W*BR (Confirmar impressora)</dd></p>
+</div>
+    <main>
+<h2>Comandos</h2>
+    <ul>
+        <button id="botao01" onclick="toggle('conteudo01')">1</button>
+
+        <li>WETR*T1189285805455 (Comando para consultar bilhete)
+            <dl id="conteudo01">
+                <dt><img src="imagens sabre/WETR-img.PNG" alt=""></dt>
+                <dd>Abrir o bilhete a ser reembolsado para utilizar as informações. <br>
+                WETR*T (mandatório para abrir bilhete no sabre).</dd>
+            </dl>
+        </li>
+        
+        <button id="botao02" onclick="toggle('conteudo02')">2</button>
+
+        <li>WFR1189285805455¥ADT¥ED (Comando para iniciar reembolso) 
+            <dl id="conteudo02">
+                <dt><img src="imagens sabre/wfr-img.PNG" alt=""></dt>
+                <dd>Comando para iniciar reembolso. 
+                    <br>
+                    WFR(Bilhete)¥A(Cia)¥ED/(24hrs).
+
+                </dd>
+            </dl>
+        </li>
+
+        <button id="botao03" onclick="toggle('conteudo03')">3</button>
+
+        <li> Preencimento da coluna CODE.
+            <dl id="conteudo03">
+                <dt><img src="imagens sabre/x-img.PNG" alt=""></dt>
+                <dd>Nesta etapa, iremos preencher a coluna code com R (Refund) e em seguida adicionaremos o "X" no bloco NEXT.</dd>
+            </dl>
+        </li>
+
+        <button id="botao04" onclick="toggle('conteudo04')">4</button>
+
+        <li>Taxas
+            <dl id="conteudo04">
+                <dt><img src="imagens sabre/xtax-img.PNG" alt=""></dt>
+                <dd>Conferir o valor das taxas e seus nomes. Após a conferencia colocar  "X" em NEXT novamente.</dd>
+            </dl>
+        </li>
+
+        <button id="botao05" onclick="toggle('conteudo05')">5</button>
+
+        <li>Valor
+            <dl id="conteudo05">
+                <dt><img src="imagens sabre/6-img.PNG" alt=""></dt>
+                <dd>Conferir os valores e continuar "X" NEXT.</dd>
+            </dl>
+        </li>
+
+        <button id="botao06" onclick="toggle('conteudo06')">6</button>
+
+        <li>Comissão
+            <dl id="conteudo06">
+                <dt><img src="imagens sabre/comissao-img.PNG" alt=""></dt>
+                <dd>Colocar a comissão em porcentagem e preencher "X" no refund.</dd>
+            </dl>
+        </li>
+
+        
+    </ul>
+</main>
+    
+</body>
+</html>
